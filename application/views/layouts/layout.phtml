@@ -2,7 +2,7 @@
     <head>
         <!-- Meta -->
         <?php $this->headTitle()->setSeparator(' - ');
-              $this->headTitle('Mon site');
+              $this->headTitle('IP');
               echo $this->headTitle() . PHP_EOL;
               
               $this->headLink()->appendStylesheet('/css/reset.css', 'all');
@@ -19,18 +19,56 @@
         ?>
     </head>
 
-    <body>
-    <h4>App5.  IP FORMATION</h4>
-    <ul id="topNav">
-        <li><a href="/home">Index</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-    <div id="page">
-		<?php echo $this->layout()->content?>
+<body id="body">
+<div id="top">
+	<div id="top_content">
+		<div id="logo">
+			<h1>IP Formation</h1>
+			<h4>Cours Zend Framework</h4>
+		</div>
 	</div>
-	<div id="footer">
-        <p>Application PHP 5</p>
-     </div>
-    </body>
+</div>
+<div class="menu">
+	<div class="menu_content">
+		<ul class="menulist">
+			<li class="menu_item"><a href="index.html" class="top">Home</a></li>
+			<li class="menu_item"><a href="solutions.html" class="top">About Us</a></li>
+			<li class="menu_item"><a href="solutions.html" class="top">Products</a></li>	
+			<li class="menu_item"><a href="index.html" class="top">Company</a></li>	
+			<li class="menu_item"><a href="index.html" class="top">Support</a></li>
+		</ul>
+	</div>
+</div>
+<div id="video">
+	<div id="video_content">
+			<h2>Cours Zend Framework</h2>
+			<h3>Trop d'la balle</h3>
 
+	</div>
+</div>
+<div id="content">
+	<?php echo $this->layout()->content; ?>
+</div>
+
+<div id="bottom">
+	<div id="bottom_content">
+		<div class="callcenter">
+			<p class="call_us" style="color:#e44038;padding-left:30px;">Suport 24/7: </p>
+			<p class="call_us"><img src="/img/phone.png" alt="phone" />  (045)0205968600 or (045)0205968611</p>
+			<p class="call_us"><img src="/img/email.png" alt="email" />  contact@contact.com</p>
+
+		</div>
+		<div id="menu_bottom_list">
+				<div class="menu_bottom" ><a href="" class="bottom_link" > Home </a></div>
+				<div class="menu_bottom" ><a href="" class="bottom_link"> Try it </a></div>
+				<div class="menu_bottom" ><a href="" class="bottom_link"> Download </a></div>
+				<div class="menu_bottom" ><a href="" class="bottom_link"> Documentation </a></div>
+				<div class="menu_bottom" ><a href="" class="bottom_link"> About </a></div>
+		</div>
+
+	</div>
+</div>
+</body>
 </html>
+
+    
