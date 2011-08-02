@@ -1,2 +1,9 @@
-coucou
-<?php echo $this->toto ?>
+<?php 
+$this->headMeta()->appendName('Keywords', 'sdfsdfsd, fsdf');
+$this->headMeta()->appendName('Description', 'sdfsdfsdfsdf');
+$this->headTitle('titre de la page d\'accueil');
+$this->headLink()->appendStylesheet('/css/specific.css', 'screen');
+?>
+<h1>Index <?php echo $this->toto ?></h1>
+
+<p>Date du jour <?php echo $this->formatDate('2011-08-02')?></p>
