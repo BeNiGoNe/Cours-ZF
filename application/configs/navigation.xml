@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+   <main>
+       <index>
+           <label>Accueil</label>
+           <route>index</route>     
+           <controller>index</controller>  
+           <action>index</action>
+       </index> 
+       
+       <about>
+           <label>Qui sommes-nous ?</label>
+           <route>about</route>     
+           <controller>index</controller>  
+           <action>about</action>
+       </about>
+       
+       <php>
+       		<label>PHP.net</label>
+       		<uri>http://www.php.net</uri>
+       		<target>_blank</target>
+       </php>
+       
+       <git>
+       		<label>GitHub</label>
+       		<uri>http://www.github.com</uri>
+       		<target>_blank</target>
+       </git>
+       
+       <!--
+       <product>
+           <label>Produits</label>
+           <uri></uri>
+           <pages>
+               <produit1>
+                   <label>Produit 1</label>
+                   <route>product</route>     
+                   <controller>shop</controller>  
+                   <action>product</action>
+                   <params>
+                        <id>1</id>
+                   </params>
+               </produit1>
+               <produit2>
+                   <label>Produit 2</label>
+                   <route>product</route>     
+                   <controller>shop</controller>  
+                   <action>product</action>
+                   <params>
+                        <id>2</id>
+                   </params>
+               </produit2>
+           
+           </pages>
+       </product>
+       -->
+       
+   </main>
+</config>

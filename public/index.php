@@ -5,9 +5,9 @@ set_error_handler(
     function($errno, $errstr)
     {
         if( 'development' === APPLICATION_ENV){
-            echo 'Erreur gÃ©nÃ©rale :' . $errstr;
+            echo 'Erreur générale :' . $errstr;
         } else {
-            echo 'Erreur gÃ©nÃ©rale';
+            echo 'Erreur générale';
         }
     }
 );
@@ -16,9 +16,9 @@ set_exception_handler(
     function($e)
     {
         if( 'development' === APPLICATION_ENV){
-            echo 'Exception gÃ©nÃ©rale : ' . $e->getMessage();
+            echo 'Exception générale : ' . $e->getMessage();
         } else {
-            echo 'Erreur gÃ©nÃ©rale';
+            echo 'Erreur générale';
         }
     }
 );

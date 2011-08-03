@@ -7,8 +7,13 @@ class IndexController extends Zend_Controller_Action
           $this->view->toto = 'index';  
     }
     
-public function aboutAction()
+	public function aboutAction()
     {
           $this->view->toto = 'about';  
+    }
+    
+	public function sitemapAction()
+    {
+  		$this->_helper->layout()->disableLayout();
     }
 }

@@ -17,7 +17,7 @@ function createGrid () {
 							position: "absolute",
 							top: "0",
 							bottom: "0",
-							zIndex: 900
+							zIndex: 900,
 							//left: pageLeft //If you don't set body width, uncomment this
 	});
 	var colWidth = 68;

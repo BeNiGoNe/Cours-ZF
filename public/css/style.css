@@ -36,7 +36,7 @@ h2{
 	color:#515151;
 	margin:0px;
 	padding-left:20px;
-	padding-top:30px;
+	padding-top:20px;
 }
 h3{
 	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -58,18 +58,18 @@ h4{
 	left: 27px;
 }
 .menu{
-	height:60px;
+	height:50px;
 	width:100%;
 	clear:both;
 	background-color:#e44038;
 }
 .menu_content{
-	height:50px;
+	height:60px;
 	width:900px;
 	margin:0 auto;
 	padding-top:5px;
 }
-.top {
+.navigation li a{
 	display:inline;
 	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size:14px;
@@ -82,44 +82,56 @@ h4{
 	padding-right:12px; 
 	text-decoration:none;
 }
-.menulist{
+.navigation{
 	list-style-type:none;
 	background-color:#e44038;
 	margin-left:-30px;
 }
-.menu_item{
+
+.navigation li{
+
 	height:60px;
 	display:inline;
 	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size:14px;
 	font-weight:400;
 	color:black;
+}
 
-}
-a.top:link{
+.navigation a:link{
 	color:black;
 	text-align:center;
 	text-decoration:none;
 }
-a.top:visited{
+.navigation a:visited{
 	color:black;
 	text-align:center;
 	text-decoration:none;
 }
-a.top:hover{
+.navigation a:hover{
 	color:white;
 	text-align:center;
 	text-decoration:none;
 	background-color:#202020;
 }
 #video{
-	height:150px;
+	height:160px;
 	width:100%;
 	background-color:#f0f0f0;
 	border-bottom:1px solid white;
 }
+
+#breadcrumbs{
+	padding-left: 50px;
+	padding-top: 10px;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:12px;
+	font-weight:400;
+	color:black;
+}
+
 #video_content{
-	height:150px;
+	height:160px;
 	width:900px;
 	margin:0 auto;
 }

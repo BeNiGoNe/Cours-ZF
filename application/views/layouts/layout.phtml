@@ -1,10 +1,15 @@
 <?php echo $this->doctype(). PHP_EOL ?>
-    <head>
-        <!-- Meta -->
-        <?php $this->headTitle()->setSeparator(' - ');
-              $this->headTitle('IP');
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<?php $this->headTitle()->setSeparator(' - ');
+              $this->headTitle('Mon site');
               echo $this->headTitle() . PHP_EOL;
               
+
+		     echo $this->navigation()
+		               ->links(Zend_Registry::get('navigation'));
+
+		
               $this->headLink()->appendStylesheet('/css/reset.css', 'all');
               $this->headLink()->appendStylesheet('/css/fonts.css', 'all');
               $this->headLink()->appendStylesheet('/css/style.css', 'all');
@@ -13,12 +18,10 @@
               $this->headScript()->appendFile('/js/less-grid-4.js', 'text/javascript');
               echo $this->headScript() . PHP_EOL;
               
-              $this->headMeta()->setHttpEquiv('Content-type', 'text/html; charset=ISO-8859-1');
+              $this->headMeta()->setHttpEquiv('Content-type', 'text/html; charset=utf-8');
               echo $this->headMeta() . PHP_EOL;
-              
-        ?>
-    </head>
-
+             ?>
+</head>
 <body id="body">
 <div id="top">
 	<div id="top_content">
@@ -30,27 +33,32 @@
 </div>
 <div class="menu">
 	<div class="menu_content">
-		<ul class="menulist">
-			<li class="menu_item"><a href="<?php echo $this->url(array(), 'index')?>" class="top">Home</a></li>
-			<li class="menu_item"><a href="<?php echo $this->url(array(), 'about')?>" class="top">About</a></li>	
-			<li class="menu_item"><a href="#" class="top">Joker</a></li>
-			<li class="menu_item"><a href="http://www.php.net" target="_blank" class="top">PHP.net</a></li>
-			<li class="menu_item"><a href="http://github.com" target="_blank" class="top">GitHub</a></li>				
-			
-		</ul>
+		<?php 
+		echo $this->navigation()
+		     ->menu(Zend_Registry::get('navigation'))
+		?>
 	</div>
 </div>
+
 <div id="video">
+	<div id="breadcrumbs">
+	<a href="/">Mon site ZF</a> / 
+	<?php 
+			echo $this->navigation()
+			          ->breadcrumbs(Zend_Registry::get('navigation'))
+			          ->setSeparator(' / ')
+			          ->setMinDepth(0);
+			?>
+	</div>	
 	<div id="video_content">
 			<h2>Cours Zend Framework</h2>
-			<h3>Avec en plus la pose d'un template</h3>
+			<h3></h3>
 
 	</div>
 </div>
 <div id="content">
-	<?php echo $this->layout()->content; ?>
+	<?php echo $this->layout()->content?>
 </div>
-
 <div id="bottom">
 	<div id="bottom_content">
 		<div class="callcenter">
@@ -59,10 +67,5 @@
 			<p class="call_us"><img src="/img/email.png" alt="email" />  contact@contact.com</p>
 
 		</div>
-
-	</div>
-</div>
-</body>
 </html>
 
-    
