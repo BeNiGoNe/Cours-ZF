@@ -6,10 +6,24 @@
            <route>index</route>     
            <controller>index</controller>  
            <action>index</action>
-       </index> 
+       </index>
+       
+       <product>
+           <label>Catégories</label>
+           <route>categories</route>     
+           <controller>shop</controller>  
+           <action>allcategories</action>
+       </product>
+       
+       <listProduct>
+           <label>Liste Produits</label>
+		   <route>allProducts</route>     
+           <controller>shop</controller>  
+           <action>allproducts</action>
+       </listProduct>
        
        <about>
-           <label>Qui sommes-nous ?</label>
+           <label>About</label>
            <route>about</route>     
            <controller>index</controller>  
            <action>about</action>
@@ -27,10 +41,9 @@
        		<target>_blank</target>
        </git>
        
+       
+       
        <!--
-       <product>
-           <label>Produits</label>
-           <uri></uri>
            <pages>
                <produit1>
                    <label>Produit 1</label>
@@ -51,8 +64,7 @@
                    </params>
                </produit2>
            
-           </pages>
-       </product>
+           </pages>       
        -->
        
    </main>
