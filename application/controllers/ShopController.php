@@ -16,4 +16,10 @@ class ShopController extends Zend_Controller_Action
     	$productMapper = new Application_Model_Mapper_Product();
     	$this->view->products = $productMapper->getList();
     }
+    
+	public function productsbycatidAction(){
+		$categoryMapper = new Application_Model_Mapper_Category();
+    	$this->view->categories = $categoryMapper->getList();
+    }
+    
 }

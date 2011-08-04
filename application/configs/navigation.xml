@@ -22,6 +22,11 @@
            <action>allproducts</action>
        </listProduct>
        
+       <productsByCatId>
+           <label>Produits par Catégorie</label>
+		   <uri>/shop/productsbycatid</uri>
+       </productsByCatId>
+       
        <about>
            <label>About</label>
            <route>about</route>     

@@ -19,9 +19,16 @@ class Application_Model_Category
 	public function setLabel($_label) {
 		$this->_label = $_label;
 	}
+	
 	public function getProducts() {
+		if($this->_products == null){
+			$productMapper = new Application_Model_Mapper_Product();
+			$this->_products = $productMapper->getListByCategoryId($this->_id);
+		}
+		
 		return $this->_products;
 	}
+	
 	public function setProducts($_products) {
 		$this->_products = $_products;
 	}

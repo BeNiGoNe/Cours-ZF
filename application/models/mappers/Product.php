@@ -1,17 +1,7 @@
 <?php
 
-class Application_Model_Mapper_Product
+class Application_Model_Mapper_Product extends Application_Model_Mapper_Abstract
 {
-	private $_dbTable = null;
-	
-	protected function getDbTable(){
-		if($this->_dbTable == null){
-			$this->_dbTable = new Application_Model_DbTable_Product();
-		}
-
-		return $this->_dbTable;
-		
-	}
 	
 	public function getList(){
 		$rowSet = $this->getDbTable()->fetchAll();
@@ -27,4 +17,22 @@ class Application_Model_Mapper_Product
 		
 		return $products;
 	}
+	
+	public function getListByCategoryId($category){
+		
+		$rowSet = $this->getDbTable()->fetchAll("c_id = $category");		
+		$products = array();
+		
+		foreach ($rowSet as $row){
+			$product = new Application_Model_Product();
+			$product->setId($row->p_id);
+			$product->setLabel($row->p_label);
+			$product->setDesc($row->p_desc);
+			$products[] = $product;
+		}
+		
+		return $products;
+	}
+	
+
 }

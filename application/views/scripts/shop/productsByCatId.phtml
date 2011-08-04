@@ -1,0 +1,15 @@
+<ul>
+<?php
+foreach($this->categories as $category){
+
+	echo '<li>' . $category->getLabel() . '</li>';
+/*	
+	echo '<ul>';
+	foreach ($category->getProducts() as $product){
+		echo '<li>'. $product->getLabel() . ' => ' . $product->getDesc() . '</li>';
+	}
+	echo '</ul>';
+*/
+}
+?>
+</ul>
